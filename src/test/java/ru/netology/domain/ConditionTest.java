@@ -27,14 +27,14 @@ class ConditionTest {
 
 
     @Test
-    public void shouldNotChangeFieldValueMax() {
+    public void shouldNotChangeCurrentTemperatureUpperMax() {
         Condition conditioner = new Condition();
         conditioner.setCurrentTemperature(100);
         assertEquals(0, conditioner.getCurrentTemperature());
 
     }
     @Test
-    public void shouldNotChangeFieldValueMin() {
+    public void shouldNotChangeCurrentTemperatureUnderMin() {
         Condition conditioner = new Condition();
         conditioner.setCurrentTemperature(-100);
         assertEquals(0, conditioner.getCurrentTemperature());
