@@ -48,16 +48,7 @@ class RadioTest {
 
     }
 
-    @Test
-    public void shouldInit() {
-        Radio radioStation = new Radio();
-        assertNull(radioStation.getName());
-        assertEquals(0, radioStation.getCurrentChanel());
-        assertEquals(0, radioStation.getCurrentVolume());
-    //    assertEquals(0, radioStation.getMaxChanel());
-    //    assertEquals(0, radioStation.getMaxVolume());
-        assertFalse(radioStation.isOn());
-    }
+
 
     @Test
     public void shouldChangeCurrentChanel() {

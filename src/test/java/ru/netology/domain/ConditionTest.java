@@ -15,15 +15,6 @@ class ConditionTest {
         System.out.println(conditioner.getName());
 
     }
-    @Test
-    public void shouldInit() {
-        Condition conditioner = new Condition();
-        assertNull(conditioner.getName());
-        assertEquals(0, conditioner.getMaxTemperature());
-        assertEquals(0, conditioner.getMinTemperature());
-        assertEquals(0, conditioner.getCurrentTemperature());
-        assertFalse(conditioner.isOn());
-            }
 
 
     @Test
