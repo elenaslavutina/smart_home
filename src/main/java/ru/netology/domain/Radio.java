@@ -15,22 +15,13 @@ public class Radio {
         return maxVolume;
     }
 
-    //   public void setMaxVolume(int maxVolume) {
-    //       this.maxVolume = maxVolume;
-    //   }
-
     public int getMinVolume() {
         return minVolume;
     }
 
-//    public void setMinVolume(int minVolume) {
-//        this.minVolume = minVolume;
-//    }
-
     public int getCurrentVolume() {
         return currentVolume;
     }
-
 
     public String getName() {
         return name;
@@ -44,17 +35,9 @@ public class Radio {
         return maxChanel;
     }
 
-    //  public void setMaxChanel(int maxChanel) {
-    //      this.maxChanel = maxChanel;
-    //  }
-
     public int getMinChanel() {
         return minChanel;
     }
-
-    //   public void setMinChanel(int minChanel) {
-    //       this.minChanel = minChanel;
-    //   }
 
     public int getCurrentChanel() {
         return currentChanel;
@@ -78,38 +61,32 @@ public class Radio {
 
     public void increaseCurrentChanelByArrow(int currentChanel) {
 
-        if (currentChanel == maxChanel)
-        {
-            currentChanel = minChanel;}
-        else
-            currentChanel++;
-        this.currentChanel = currentChanel;
+        if (currentChanel == maxChanel) {
+            this.currentChanel = minChanel;
+        } else
+            this.currentChanel = currentChanel + 1;
     }
 
     public void decreaseCurrentChanelByArrow(int currentChanel) {
 
-        if (currentChanel == minChanel)
-        {
-            currentChanel = maxChanel;}
-        else
-            currentChanel--;
-        this.currentChanel = currentChanel;
+        if (currentChanel == minChanel) {
+            this.currentChanel = maxChanel;
+        } else
+            this.currentChanel = currentChanel - 1;
     }
 
     public void increaseCurrentVolumeByArrow(int currentVolume) {
 
         if (currentVolume == maxVolume)
             return;
-        currentVolume++;
-        this.currentVolume = currentVolume;
+        this.currentVolume = currentVolume + 1;
     }
 
     public void decreaseCurrentVolumeByArrow(int currentVolume) {
 
         if (currentVolume == minVolume)
             return;
-        currentVolume--;
-        this.currentVolume = currentVolume;
+        this.currentVolume = currentVolume - 1;
     }
 
     public boolean isOn() {
