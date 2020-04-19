@@ -118,7 +118,7 @@ class RadioTest {
     public void shouldIncreaseCurrentChanelByArrow() {
         Radio radioStation = new Radio();
         radioStation.setCurrentChanel(6);
-        radioStation.increaseCurrentChanelByArrow(radioStation.getCurrentChanel());
+        radioStation.increaseCurrentChanelByArrow();
         assertEquals(7, radioStation.getCurrentChanel());
     }
 
@@ -126,7 +126,7 @@ class RadioTest {
     public void shouldDecreaseCurrentChanelByArrow() {
         Radio radioStation = new Radio();
         radioStation.setCurrentChanel(6);
-        radioStation.decreaseCurrentChanelByArrow(radioStation.getCurrentChanel());
+        radioStation.decreaseCurrentChanelByArrow();
         assertEquals(5, radioStation.getCurrentChanel());
     }
 
@@ -134,7 +134,7 @@ class RadioTest {
     public void shouldReassignedCurrentChanelDown() {
         Radio radioStation = new Radio();
         radioStation.setCurrentChanel(9);
-        radioStation.increaseCurrentChanelByArrow(radioStation.getCurrentChanel());
+        radioStation.increaseCurrentChanelByArrow();
         assertEquals(0, radioStation.getCurrentChanel());
     }
 
@@ -142,7 +142,7 @@ class RadioTest {
     public void shouldReassignedCurrentChanelUp() {
         Radio radioStation = new Radio();
         radioStation.setCurrentChanel(0);
-        radioStation.decreaseCurrentChanelByArrow(radioStation.getCurrentChanel());
+        radioStation.decreaseCurrentChanelByArrow();
         assertEquals(9, radioStation.getCurrentChanel());
     }
 
@@ -150,7 +150,7 @@ class RadioTest {
     public void shouldIncreaseCurrentVolumeByArrow() {
         Radio radioStation = new Radio();
         radioStation.setCurrentVolume(6);
-        radioStation.increaseCurrentVolumeByArrow(radioStation.getCurrentVolume());
+        radioStation.increaseCurrentVolumeByArrow();
         assertEquals(7, radioStation.getCurrentVolume());
     }
 
@@ -158,7 +158,7 @@ class RadioTest {
     public void shouldDecreaseCurrentVolumeByArrow() {
         Radio radioStation = new Radio();
         radioStation.setCurrentVolume(6);
-        radioStation.decreaseCurrentVolumeByArrow(radioStation.getCurrentVolume());
+        radioStation.decreaseCurrentVolumeByArrow();
         assertEquals(5, radioStation.getCurrentVolume());
     }
 
@@ -166,7 +166,7 @@ class RadioTest {
     public void shouldNotIncreaseCurrentVolumeWhenMax() {
         Radio radioStation = new Radio();
         radioStation.setCurrentVolume(radioStation.getMaxVolume());
-        radioStation.increaseCurrentVolumeByArrow(radioStation.getCurrentVolume());
+        radioStation.increaseCurrentVolumeByArrow();
         assertEquals(radioStation.getMaxVolume(), radioStation.getCurrentVolume());
     }
 
@@ -174,7 +174,7 @@ class RadioTest {
     public void shouldNotDecreaseCurrentVolumeWhenMin() {
         Radio radioStation = new Radio();
         radioStation.setCurrentVolume(radioStation.getMinVolume());
-        radioStation.decreaseCurrentVolumeByArrow(radioStation.getCurrentVolume());
+        radioStation.decreaseCurrentVolumeByArrow();
         assertEquals(radioStation.getMinVolume(), radioStation.getCurrentVolume());
 
     }

@@ -59,34 +59,34 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
-    public void increaseCurrentChanelByArrow(int currentChanel) {
-
-        if (currentChanel == maxChanel) {
+    public void increaseCurrentChanelByArrow() {
+        int current = currentChanel;
+        if (current == maxChanel) {
             this.currentChanel = minChanel;
         } else
-            this.currentChanel = currentChanel + 1;
+            this.currentChanel = current + 1;
     }
 
-    public void decreaseCurrentChanelByArrow(int currentChanel) {
-
-        if (currentChanel == minChanel) {
+    public void decreaseCurrentChanelByArrow() {
+        int current = currentChanel;
+        if (current == minChanel) {
             this.currentChanel = maxChanel;
         } else
-            this.currentChanel = currentChanel - 1;
+            this.currentChanel = current - 1;
     }
 
-    public void increaseCurrentVolumeByArrow(int currentVolume) {
-
-        if (currentVolume == maxVolume)
+    public void increaseCurrentVolumeByArrow() {
+        int volume = currentVolume;
+        if (volume == maxVolume)
             return;
-        this.currentVolume = currentVolume + 1;
+        this.currentVolume = volume + 1;
     }
 
-    public void decreaseCurrentVolumeByArrow(int currentVolume) {
-
-        if (currentVolume == minVolume)
+    public void decreaseCurrentVolumeByArrow() {
+        int volume = currentVolume;
+        if (volume == minVolume)
             return;
-        this.currentVolume = currentVolume - 1;
+        this.currentVolume = volume - 1;
     }
 
     public boolean isOn() {
